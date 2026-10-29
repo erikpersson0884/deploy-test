@@ -1,0 +1,40 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Flask
+.flaskenv
+instance/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Packaging
+*.egg-info/
+dist/
+build/
+*.egg
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Docker
+docker-compose.override.yml
