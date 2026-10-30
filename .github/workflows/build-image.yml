@@ -44,11 +44,11 @@ jobs:
             type=sha
             type=raw,value=latest,enable={{is_default_branch}}
 
-      - name: Build and push ARM64 image
+      - name: Build and push multi-platform image
         uses: docker/build-push-action@v6
         with:
           context: .
-          platforms: linux/arm64
+          platforms: linux/arm64,linux/amd64
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -59,4 +59,4 @@ jobs:
           curl -fsS -X POST ${{ secrets.DEPLOY_URL }} \
             -H "CF-Access-Client-Id: ${{ secrets.CF_ACCESS_CLIENT_ID }}" \
             -H "CF-Access-Client-Secret: ${{ secrets.CF_ACCESS_CLIENT_SECRET }}" \
-            -H "Authorization: Bearer ${{ secrets.DEPLOY_TOKEN }}"
+            -H "Authorization: ****** secrets.DEPLOY_TOKEN }}"
