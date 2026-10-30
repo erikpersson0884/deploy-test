@@ -6,6 +6,9 @@ app = Flask(__name__)
 @app.get("/")
 def hello() -> str:
     return """
+<style>
+    body { background: black; color: white; font-family: monospace; }
+</style>
 Hello, world!\n
 1
 """
