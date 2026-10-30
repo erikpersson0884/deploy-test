@@ -54,9 +54,3 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
-      - name: Trigger deploy
-        run: |
-          curl -fsS -X POST ${{ secrets.DEPLOY_URL }} \
-            -H "CF-Access-Client-Id: ${{ secrets.CF_ACCESS_CLIENT_ID }}" \
-            -H "CF-Access-Client-Secret: ${{ secrets.CF_ACCESS_CLIENT_SECRET }}" \
-            -H "Authorization: ****** secrets.DEPLOY_TOKEN }}"
